@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+:root {
+    --white: #fff;
+    --black: #1c2b2d;
+    --blue: #31326f;
+    --light-blue: #005490;
+    --color-primary: #9d0191;
+    --color-sec: #db6400;
+    --color-grey: #eee;
+    --color-dark-grey: #222831;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: url(./images/bg.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.main::after{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+}
+
+.coming-soon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.coming-soon > * {
+    color: var(--white)
+}
+
+.coming-soon h1{
+    font-size: 5.5rem;
+    text-shadow: 0 0 4px #fff;
+}
+
+.coming-soon h2{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.coming-soon > p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.boxes{
+    display: flex;
+    margin: 2rem 0;
+}
+
+.boxes > * {
+    margin: 2rem;
+    width: 10rem;
+}
+
+.box > div{
+    font-size: 4rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+.boxes .box{
+    background-color: rgba(240, 238, 238, 0.315);
+}
+
+.box p{
+    background-color: var(--color-sec);
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+
+.newsletter h2{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+
+form input{
+    padding: 5px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    background-color: transparent;
+    border:  3px solid rgb(204, 204, 204);
+    border-radius: 3px 0 0 3px;
+    color: rgb(223, 221, 221);
+}
+
+::placeholder{
+    color: rgb(223, 221, 221);
+}
+
+.newsletter button{
+    background-color: orangered;
+    color: var(--white);
+    border: none;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 5px;
+    border-radius: 0 3px 3px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .coming-soon{
+        width: 100%;
+    }
+}
